@@ -1,0 +1,121 @@
+[
+    {
+        "title": "A Court of Thorns and Roses",
+        "author": "Sarah J. Maas",
+        "year": "2015",
+        "isbn": "9781619634506",
+        "read": false
+    },
+    {
+        "title": "Anxious People",
+        "author": "Fredrik Backman",
+        "year": "2019",
+        "isbn": "9781501160835",
+        "read": false
+    },
+    {
+        "title": "Circe",
+        "author": "Madeline Miller",
+        "year": "2018",
+        "isbn": "9780316556323",
+        "read": true
+    },
+    {
+        "title": "Educated",
+        "author": "Tara Westover",
+        "year": "2018",
+        "isbn": "9780399590504",
+        "read": false
+    },
+    {
+        "title": "Little Fires Everywhere",
+        "author": "Celeste Ng",
+        "year": "2017",
+        "isbn": "9780735224314",
+        "read": false
+    },
+    {
+        "title": "Normal People",
+        "author": "Sally Rooney",
+        "year": "2018",
+        "isbn": "9780571334650",
+        "read": false
+    },
+    {
+        "title": "Pride and Prejudice",
+        "author": "Jane Austen",
+        "year": "1813",
+        "isbn": "781503290563",
+        "read": true
+    },
+    {
+        "title": "Project Hail Mary",
+        "author": "Andy Weir",
+        "year": "2021",
+        "isbn": "9780593135204",
+        "read": false
+    },
+    {
+        "title": "The Great Gatsby",
+        "author": "F. Scott Fitzgerald",
+        "year": "1925",
+        "isbn": "9780743273565",
+        "read": false
+    },
+    {
+        "title": "The Midnight Library",
+        "author": "Matt Haig",
+        "year": "2020",
+        "isbn": "9780525559474",
+        "read": true
+    },
+    {
+        "title": "The Night Circus",
+        "author": "Erin Morgenstern",
+        "year": "2011",
+        "isbn": "9780307744432",
+        "read": true
+    },
+    {
+        "title": "The Silent Patient",
+        "author": "Alex Michaelides",
+        "year": "2019",
+        "isbn": "9781250301697",
+        "read": false
+    },
+    {
+        "title": "The Song of Achilles",
+        "author": "Madeline Miller",
+        "year": "2011",
+        "isbn": "9780062060617",
+        "read": false
+    },
+    {
+        "title": "The Testaments",
+        "author": "Margaret Atwood",
+        "year": "2019",
+        "isbn": "9780385543781",
+        "read": false
+    },
+    {
+        "title": "The Vanishing Half",
+        "author": "Brit Bennett",
+        "year": "2020",
+        "isbn": "9780525536291",
+        "read": false
+    },
+    {
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "year": "1960",
+        "isbn": "9780060935467",
+        "read": false
+    },
+    {
+        "title": "Where the Crawdads Sing",
+        "author": "Delia Owens",
+        "year": "2018",
+        "isbn": "9780735219106",
+        "read": false
+    }
+]
