@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cursuri - BlueLearn</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50">
+
+    <nav class="bg-blue-600 p-4 text-white shadow-md">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <a href="/dashboard" class="font-bold text-xl flex items-center">
+                <span class="mr-2">←</span> BlueLearn
+            </a>
+            <div class="text-sm">Nivelul tău: <span class="font-bold">{{ nivel_actual }}</span></div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-4 py-10">
+        <header class="mb-10 text-center">
+            <h1 class="text-3xl font-extrabold text-gray-900 mb-2">Drumul tău spre succes</h1>
+            <p class="text-gray-600">Finalizează lecțiile pentru a debloca conținut nou și a câștiga XP.</p>
+        </header>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {% for lectie in lectii %}
+                {% set este_blocata = lectie.nivel_necesar > nivel_actual %}
+                
+                <div class="relative overflow-hidden rounded-2xl border-2 transition-all duration-300 
+                    {{ 'bg-gray-100 border-gray-200 opacity-75' if este_blocata else 'bg-white border-blue-100 shadow-sm hover:shadow-md' }}">
+                    
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="px-3 py-1 rounded-full text-xs font-bold 
+                                {{ 'bg-gray-200 text-gray-500' if este_blocata else 'bg-blue-100 text-blue-600' }}">
+                                Nivel {{ lectie.nivel_necesar }}
+                            </span>
+                            
+                            {% if lectie.id in terminate %}
+                                <span class="bg-emerald-100 text-emerald-600 px-3 py-1 rounded-full text-xs font-bold">Completat ✅</span>
+                            {% endif %}
+                        </div>
+
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">{{ lectie.titlu }}</h3>
+                        <p class="text-gray-500 text-sm mb-6">{{ lectie.capitol }}</p>
+
+                        <div class="mt-auto flex flex-col gap-2">
+                        {% if este_blocata %}
+                        <div class="flex items-center justify-center w-full py-3 bg-gray-200 text-gray-500 rounded-xl font-bold cursor-not-allowed">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20"><path d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"></path></svg>
+            Nivel {{ lectie.nivel_necesar }} necesar
+                        </div>
+    {% else %}
+                    <a href="/view_lectie/{{ lectie.id }}" class="block text-center w-full py-2 bg-white border-2 border-blue-600 text-blue-600 rounded-xl font-bold hover:bg-blue-50 transition">
+            📖 Citește Teoria
+                    </a>
+
+        {% if lectie.id in terminate %}
+            <button disabled class="w-full py-2 bg-emerald-100 text-emerald-600 rounded-xl font-bold border border-emerald-200 cursor-default">
+                Quiz Finalizat ✓
+            </button>
+        {% else %}
+            <a href="/quiz/{{ lectie.id }}" class="block text-center w-full py-2 bg-blue-600 text-white rounded-xl font-bold hover:bg-blue-700 shadow-md transition transform active:scale-95">
+                📝 Începe Quiz
+            </a>
+        {% endif %}
+    {% endif %}
+</div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</body>
+</html>
