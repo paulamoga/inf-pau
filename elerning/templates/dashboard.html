@@ -9,13 +9,11 @@
 </head>
 <body class="bg-gray-100">
 
-    <!-- Bara de Navigare -->
  <nav class="bg-blue-600 p-4 text-white shadow-lg">
     <div class="max-w-4xl mx-auto flex justify-between items-center">
         <h1 class="font-bold text-xl">BlueLearn</h1>
         <div class="flex items-center space-x-4">
             <span class="text-sm opacity-90">Salut, {{ user['nume'] }}!</span>
-            <!-- MODIFICARE AICI: Schimbăm "/" cu "/logout" -->
             <a href="/logout" class="text-sm bg-red-500 hover:bg-red-600 px-3 py-1 rounded transition font-semibold">
                 Logout
             </a>
@@ -23,7 +21,6 @@
     </div>
 </nav>
 
-    <!-- Conținut Dashboard -->
     <div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-xl shadow-md">
         <div class="flex items-center space-x-6 mb-8">
             <!-- Cercul cu Nivelul (Am corectat din 'level' in 'user.nivel') -->
@@ -38,7 +35,6 @@
             </div>
         </div>
 
-        <!-- Statistici XP -->
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
             <div class="p-4 bg-blue-50 rounded-lg border border-blue-100 shadow-sm">
                 <div class="text-blue-600 text-sm font-semibold uppercase tracking-wider">Experiență Totală</div>

@@ -9,9 +9,7 @@
 <body class="bg-blue-100 flex flex-col items-center justify-center min-h-screen">
 
     <div class="bg-white p-8 rounded-2xl shadow-xl w-full max-w-md">
-        <!-- Logo și Titlu -->
         <div class="flex flex-col items-center mb-6">
-            <!-- MODIFICARE: Am corectat calea către imaginea ta reală -->
             <img src="{{ url_for('static', filename='balena.png') }}" 
                  alt="Logo BlueLearn" 
                  class="w-20 h-20 object-contain mb-2">
@@ -19,7 +17,6 @@
         </div>
 
         <form action="/register" method="POST" class="space-y-4">
-            <!-- Username -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Nume Utilizator</label>
                 <input type="text" name="username" required 
@@ -27,14 +24,12 @@
                 <p class="text-xs text-gray-500 mt-1 italic">* Minim 3 caractere.</p>
             </div>
 
-            <!-- Email -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Adresa Email</label>
                 <input type="email" name="email" required 
                     class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none">
             </div>
 
-            <!-- Parola -->
             <div>
                 <label class="block text-sm font-semibold text-gray-700">Parolă</label>
                 <input type="password" name="password" required 
